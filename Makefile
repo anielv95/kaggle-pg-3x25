@@ -12,7 +12,6 @@ install:
 lint:
 	pylint --disable=R,C src/*.py
 
-
 format:
 	black src/*.py
 

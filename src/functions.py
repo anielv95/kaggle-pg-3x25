@@ -1,9 +1,14 @@
 import pandas as pd
-import numpy as np
+
+# import numpy as np
 
 
 def base_line(df: pd.DataFrame):
-    shape = df.shape
-    value = 4.647
-    # print(np.ones(shape) * value)
-    return np.ones(shape[0]) * value
+    pred = df.copy()
+    pred["Hardness"] = 4.647
+    return pred[["id", "Hardness"]]
+
+
+# def getting_csv(prediction):
+#     df = pd.DataFrame(data={"Hardness":prediction})
+#     df["id"] = df.index
